@@ -1,7 +1,8 @@
 ## Flappy Broccoli Fly
 
-![](https://raw.githubusercontent.com/BroccoliFly/flappy-broccolifly/master/meta/screenshot-1.jpg)
-![](https://raw.githubusercontent.com/BroccoliFly/flappy-broccolifly/master/meta/screenshot-2.jpg)
+ .. | ..
+---|---
+![](https://raw.githubusercontent.com/BroccoliFly/flappy-broccolifly/master/meta/screenshot-1.jpg) | ![](https://raw.githubusercontent.com/BroccoliFly/flappy-broccolifly/master/meta/screenshot-2.jpg)
 
 ## About
 
