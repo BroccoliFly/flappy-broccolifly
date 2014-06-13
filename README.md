@@ -1,7 +1,8 @@
 ## Flappy Broccoli Fly
 
-![](https://raw.githubusercontent.com/BroccoliFly/flappy-broccolifly/master/meta/screenshot-1.jpg)
-![](https://raw.githubusercontent.com/BroccoliFly/flappy-broccolifly/master/meta/screenshot-2.jpg)
+ .. | ..
+---|---
+![](https://raw.githubusercontent.com/BroccoliFly/flappy-broccolifly/master/meta/screenshot-1.jpg) | ![](https://raw.githubusercontent.com/BroccoliFly/flappy-broccolifly/master/meta/screenshot-2.jpg)
 
 ## About
 
@@ -18,6 +19,9 @@ The font is called 04B_19. Someone mentioned it as the "Flappy Bird Font", but i
 
 `grunt` will not start the server (bug in generator?), so use `gulp serve` as well.
 
+When most images are converted to the Broccoli Fly theme, this will be displayed on the [broccolifly.com](broccolifly.com) website.
+
+Multiplayer and other cool stuff might make it into this sometime.
 ### Useful Phaser Info
 
 * game/states/* are bundled by Browserify. Every file represents a state in the game
