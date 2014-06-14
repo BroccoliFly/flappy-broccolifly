@@ -26,7 +26,7 @@ Fly.prototype.flap = function() {
 
 Fly.prototype.update = function() {
 
-  if (this.alive && this.angle < 90) {
+  if (this.alive && this.angle < 60) {
     this.angle += 2;
   }
 
