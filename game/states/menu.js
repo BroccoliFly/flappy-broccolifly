@@ -35,11 +35,19 @@ Menu.prototype = {
     /** Button **/
 
     this.startButton = this.game.add.button(this.game.width / 2, 280, "startButton", this.startClick, this);
+    this.startButton.events.onInputOver.add(function() {
+      document.body.style.cursor = 'pointer';
+    }, this);
+    this.startButton.events.onInputOut.add(function() {
+      document.body.style.cursor = 'default';
+    }, this);
+
     // (.., callback, context)
     this.startButton.anchor.setTo(0.5, 0.5);
   },
 
   startClick: function() {
+    document.body.style.cursor = 'default';
     this.game.state.start("play");
   },
 

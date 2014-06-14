@@ -15,8 +15,18 @@ var Scoreboard = function(game, x, y, frame) {
 
   var self = this;
   this.startButton = this.game.add.button(this.game.width/2, 300, 'startButton',function() {
+    document.body.style.cursor = 'default';
     return self.game.state.start("play");
   }, this);
+
+  this.startButton.events.onInputOver.add(function() {
+    document.body.style.cursor = 'pointer';
+  }, this);
+
+  this.startButton.events.onInputOut.add(function() {
+    document.body.style.cursor = 'default';
+  }, this);
+
   this.startButton.anchor.setTo(0.5,0.5);
 
   this.add(this.startButton);
@@ -33,14 +43,15 @@ Scoreboard.prototype.show = function(score) {
 
   this.scoreText.setText(score.toString());
 
-  if(!!localStorage) {
+  if (window.localStorage) {
     highScore = localStorage.getItem('highScore');
 
-    if(!highScore || highScore < score) {
+    if (!highScore || highScore < score) {
       highScore = score;
       localStorage.setItem('highScore', highScore);
     }
-  } else {
+  }
+  else {
     highScore = "none";
   }
 
@@ -49,10 +60,12 @@ Scoreboard.prototype.show = function(score) {
   var medalSpriteNumber = null;
 
   if (score >= 10 && score < 20) {
-    medalSpriteNumber = 1;
+    // Silver
+    medalSpriteNumber = 0;
   }
   else if (score >= 20) {
-    medalSpriteNumber = 0;
+    // Gold
+    medalSpriteNumber = 1;
   }
 
   var medal;
@@ -81,11 +94,8 @@ Scoreboard.prototype.show = function(score) {
     emitter.start(false, 1000, 1000);
 
   }
-  this.game.add.tween(this).to({y: 0}, 1000, Phaser.Easing.Bounce.Out, true);
-}
 
-Scoreboard.prototype.startClick = function() {
-  this.game.state.start("play");
+  this.game.add.tween(this).to({y: 0}, 1000, Phaser.Easing.Bounce.Out, true);
 }
 
 Scoreboard.prototype.update = function() {

@@ -51,8 +51,6 @@ Play.prototype = {
   },
 
   update: function() {
-    this.game.physics.arcade.collide(this.fly, this.ground);
-
     this.game.physics.arcade.collide(this.fly, this.ground, this.death, null, this);
 
     this.pipes.forEach(function(pipeGroup) {
@@ -103,6 +101,14 @@ Play.prototype = {
 
       this.scoreText.visible = true;
     }
+  },
+
+  pause: function() {
+    
+  },
+
+  resume: function() {
+
   },
 
   death: function() {
