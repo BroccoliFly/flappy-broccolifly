@@ -1,5 +1,6 @@
 var Fly = require("../prefabs/fly");
 var Ground = require("../prefabs/ground");
+var Background = require("../prefabs/background");
 var PipeGroup = require("../prefabs/pipeGroup");
 var Scoreboard = require("../prefabs/scoreboard");
 
@@ -10,7 +11,10 @@ Play.prototype = {
     this.game.physics.startSystem(Phaser.Physics.ARCADE);
     this.game.physics.arcade.gravity.y = 1200;
 
-    this.background = this.game.add.sprite(0, 0, "background");
+    //this.background = this.game.add.sprite(0, 0, "background");
+
+    this.background = new Background(this.game, 0, 0, 288, 505);
+    this.game.add.existing(this.background);
 
     this.fly = new Fly(this.game, 100, this.game.height / 2);
     this.game.add.existing(this.fly);
