@@ -21,6 +21,9 @@ module.exports = function (grunt) {
     watch: {
       scripts: {
         files: [
+            'css/*.css',
+            'index.html',
+            'game/assets/*',
             'game/**/*.js',
             '!game/main.js'
         ],

@@ -1,6 +1,8 @@
 var Fly = function(game, x, y, frame) {
   // Inherit
   Phaser.Sprite.call(this, game, x, y, 'bird', frame);
+  this.scale.x = 0.9;
+  this.scale.y = 0.9;
 
   // The point of rotation.
   this.anchor.setTo(0.5, 0.5);
@@ -12,6 +14,8 @@ var Fly = function(game, x, y, frame) {
 
   this.game.physics.arcade.enableBody(this);
   this.body.allowGravity = false;
+
+  this.body.setSize(Math.round(41 * 0.9), Math.round(36 * 0.9), 0, 0);
 };
 
 Fly.prototype = Object.create(Phaser.Sprite.prototype);
