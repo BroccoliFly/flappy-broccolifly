@@ -14,6 +14,7 @@ var Fly = function(game, x, y, frame) {
 
   this.game.physics.arcade.enableBody(this);
   this.body.allowGravity = false;
+  this.body.collideWorldBounds = true; 
 
   this.body.setSize(Math.round(41 * 0.9), Math.round(36 * 0.9), 0, 0);
 };
