@@ -15,7 +15,7 @@ I found out to use Phaser by following the [Flappy Bird](http://www.codevinsky.c
 The assets are taken from [this place](http://lanica.co/flappy-clone/), which I guess were directly taken from the game, and the bird was coloured.
 They will be changed later.
 
-The font is called 04B_19. Someone mentioned it as the "Flappy Bird Font", but it is obvious that it isn't it. At least it is similar.
+The font is called 04B_19. The title is a custom image.
 
 `grunt` will not start the server (bug in generator?), so use `gulp serve` as well.
 
